@@ -1,0 +1,27 @@
+version: "3"
+services:
+    # nginx:
+    #     ports:
+    #         - "4000:80"
+
+    node-app:
+        build:
+            args:
+                NODE_ENV: development
+        volumes:
+            - ./server/:/app/server
+            - /app/server/node_modules
+        environment:
+            - NODE_ENV=development
+        command: bash -c "node index.js"
+
+    # frontend:
+    #     build:
+    #         context: ./client
+    #         args:
+    #             NODE_ENV: development
+    #     volumes:
+    #         - ./client:/app/client
+    #         - /app/client/node_modules
+    #     command: bash -c "cd client && npm start"
+    

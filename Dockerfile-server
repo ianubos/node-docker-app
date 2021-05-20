@@ -1,0 +1,15 @@
+FROM node:15
+RUN mkdir -p /app/server
+WORKDIR /app/server
+COPY ./server/package.json .
+ARG NODE_ENV
+RUN if [ "$NODE_ENV" = "development" ]; \
+        then npm install; \
+        else npm install --only=production; \
+        fi
+COPY /server/ ./
+ENV PORT 4000
+EXPOSE $PORT
+CMD ["node", "index.js"]
+
+
