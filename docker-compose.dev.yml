@@ -1,9 +1,5 @@
 version: "3"
 services:
-    # nginx:
-    #     ports:
-    #         - "4000:80"
-
     node-app:
         build:
             args:
