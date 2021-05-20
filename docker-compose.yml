@@ -16,11 +16,12 @@ services:
         environment:
             - PORT=4000
     
-    # frontend:
-    #     build: ./client
-    #     environment:
-    #         - PORT=3000
-    #     depends_on: 
-    #         - nginx
-    #         - node-app
+    frontend:
+        build:
+            context: ./
+            dockerfile: Dockerfile-client
+        ports:
+            - "3000:3000"
+        environment:
+            - PORT=3000
 
