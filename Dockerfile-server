@@ -1,6 +1,6 @@
 FROM node:15
-RUN mkdir -p /app/server
-WORKDIR /app/server
+RUN mkdir -p server_app
+WORKDIR /server_app
 COPY ./server/package.json .
 ARG NODE_ENV
 RUN if [ "$NODE_ENV" = "development" ]; \

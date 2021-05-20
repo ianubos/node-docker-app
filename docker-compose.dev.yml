@@ -5,8 +5,8 @@ services:
             args:
                 NODE_ENV: development
         volumes:
-            - ./server/:/app/server
-            - /app/server/node_modules
+            - ./server/:/server_app
+            - /server_app/node_modules
         environment:
             - NODE_ENV=development
         command: bash -c "node index.js"
@@ -16,8 +16,8 @@ services:
             args:
                 NODE_ENV: development
         volumes:
-            - ./client:/app/client
-            - /app/client/node_modules
+            - ./client:/client_app
+            - /client_app/node_modules
         environment:
             - NODE_ENV=development
         command: bash -c "npm start"
