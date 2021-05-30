@@ -14,7 +14,7 @@ services:
         environment:
             - PORT=4000
     
-    frontend:
+    nextjs:
         build:
             context: ./
             dockerfile: Dockerfile-client

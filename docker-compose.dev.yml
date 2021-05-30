@@ -11,7 +11,7 @@ services:
             - NODE_ENV=development
         command: bash -c "node index.js"
 
-    frontend:
+    nextjs:
         build:
             args:
                 NODE_ENV: development
@@ -19,6 +19,6 @@ services:
             - ./client:/client_app
             - /client_app/node_modules
         environment:
-            - NODE_ENV=development
-        command: bash -c "npm start"
+            - NODE_ENV=development  
+        command: bash -c "npm run dev"
     
