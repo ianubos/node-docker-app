@@ -8,7 +8,7 @@ RUN if [ "$NODE_ENV" = "development" ]; \
         else npm install --only=production; \
         fi
 COPY . ./
-CMD ["npm", "install", "-g", "serve"]
+CMD ["npm", "install", "--global", "--unsafe-perm", "serve"]
 CMD ["npm", "run", "build"]
 CMD ["serve", "-s", "out", "-p", "3000"]
 
