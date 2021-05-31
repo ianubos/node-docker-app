@@ -27,4 +27,4 @@ services:
                 NODE_ENV: production
         environment:
             - NODE_ENV=production  
-        command: bash -c "serve -s out -p 3000"
+        command: serve -s out -p 3000
