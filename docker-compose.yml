@@ -8,6 +8,7 @@ services:
             - ./server/nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
     
     node-app:
+        image: ianubos/blog-node-app
         build:
             context: ./
             dockerfile: Dockerfile-server
@@ -15,6 +16,7 @@ services:
             - PORT=4000
     
     nextjs:
+        image: ianubos/blog-nextjs
         build:
             context: ./
             dockerfile: Dockerfile-client

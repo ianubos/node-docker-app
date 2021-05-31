@@ -27,4 +27,4 @@ services:
                 NODE_ENV: production
         environment:
             - NODE_ENV=production  
-        command: npm run dev
+        command: bash -c "serve -s out -p 3000"
