@@ -1,6 +1,6 @@
 FROM node:15 as dependencies
 WORKDIR /client_app
-COPY ./client/package.json ./client/package-lock.json .
+COPY ./client/package.json .
 ARG NODE_ENV
 RUN if [ "$NODE_ENV" = "development" ]; \
         then npm install; \
