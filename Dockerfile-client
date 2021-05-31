@@ -4,7 +4,7 @@ COPY ./client/package.json .
 ARG NODE_ENV
 RUN if [ "$NODE_ENV" = "development" ]; \
         then npm install; \
-        else npm install --only=production && npm install --global --unsafe-perm serve; \
+        else npm install && npm install --global --unsafe-perm serve; \
         fi
 COPY /client/ ./
 CMD ["npm", "run", "build"]
