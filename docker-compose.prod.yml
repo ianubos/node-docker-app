@@ -25,6 +25,9 @@ services:
             context: .
             args:
                 NODE_ENV: production
+        volumes:
+            - ./client:/client_app
+            - /client_app/node_modules
         environment:
             - NODE_ENV=production  
         command: serve -s out -p 3000
