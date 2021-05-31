@@ -7,7 +7,6 @@ RUN if [ "$NODE_ENV" = "development" ]; \
         else npm install --only=production && npm install --global --unsafe-perm serve; \
         fi
 COPY /client/ ./
-# CMD ["npm", "install", "--global", "--unsafe-perm", "serve"]
 CMD ["npm", "run", "build"]
 CMD ["serve", "-s", "out", "-p", "3000"]
 
