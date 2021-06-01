@@ -16,7 +16,7 @@ services:
             - PORT=4000
     
     nextjs:
-        image: ianubos/blog-nextjs
+        # image: ianubos/blog-nextjs
         build:
             context: ./
             dockerfile: Dockerfile-client
