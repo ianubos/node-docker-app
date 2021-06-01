@@ -1,4 +1,4 @@
-FROM node:15 as dependencies
+FROM node:15
 WORKDIR /client_app
 COPY ./client/package.json .
 ARG NODE_ENV
